@@ -35,10 +35,10 @@
 		ytick={-5,...,5},
         ]
 
-		\addplot+[thick, samples=10,name path=function1] {(x - 1) + x - (2*x + 1)};
-		\addplot+[thick, samples=10,name path=function2] {-(x - 1) + x - (2*x + 1)};
-		\addplot+[thick, samples=10,name path=function3] {(x - 1) + x - -(2*x + 1)};
-		\addplot+[thick, samples=10,name path=function4] {-(x - 1) + x - -(2*x + 1)};
+		\addplot+[thick, blue, solid, samples=10,name path=function1] {(x - 1) + x - (2*x + 1)};
+		\addplot+[thick, blue, dashed, samples=10,name path=function2] {-(x - 1) + x - (2*x + 1)};
+		\addplot+[thick, red, solid, samples=10,name path=function3] {(x - 1) + x - -(2*x + 1)};
+		\addplot+[thick, red, dashed, samples=10,name path=function4] {-(x - 1) + x - -(2*x + 1)};
 		\addplot+[name path=axis] coordinates {(-10,0) (10,0)};
 		\addplot[white] fill between[ of=function4 and axis,split,
                 every segment no 1/.style={green!20}];
@@ -67,10 +67,10 @@ x \in (-1, 0)
 		ytick={-5,...,5},
         ]
 
-		\addplot+[thick, samples=10,name path=function1] {(x) - (x + 2)};
-		\addplot+[thick, samples=10,name path=function2] {-(x) - (x + 2)};
-		\addplot+[thick, samples=10,name path=function3] {(x) - -(x + 2)};
-		\addplot+[thick, samples=10,name path=function4] {-(x) - -(x + 2)};
+		\addplot+[thick, blue,solid, samples=10,name path=function1] {(x) - (x + 2)};
+		\addplot+[thick, blue, dashed, samples=10,name path=function2] {-(x) - (x + 2)};
+		\addplot+[thick, red, solid, samples=10,name path=function3] {(x) - -(x + 2)};
+		\addplot+[thick, red, dashed, samples=10,name path=function4] {-(x) - -(x + 2)};
 		\addplot+[name path=axis] coordinates {(-10,0) (10,0)};
 		\addplot[green!20] fill between[ of=function2 and axis,split,
                 every segment no 0/.style={opacity=1,white}];
@@ -81,7 +81,7 @@ x \in (-1, 0)
 x \in (-1, \infty)
 \end{displaymath}
 
-\ex{2.}
+\ex{3.}
 \begin{displaymath}
 |x + 2| - |x - 2| \leq x - 1
 \end{displaymath}
@@ -97,10 +97,10 @@ x \in (-1, \infty)
 		domain=-10:10
         ]
 
-		\addplot+[thick, samples=10,name path=function1] {(x+2) - (x-2) - x + 1};
-		\addplot+[thick, samples=10,name path=function2] {-(x+2) - (x-2) - x + 1};
-		\addplot+[thick, samples=10,name path=function3] {(x+2) - -(x-2) - x + 1};
-		\addplot+[thick, samples=10,name path=function4] {-(x+2) - -(x-2) - x + 1};
+		\addplot+[thick,blue,solid,samples=5,name path=function1] {(x+2) - (x-2) - x + 1};
+		\addplot+[thick,blue,dashed,samples=5,name path=function2] {-(x+2) - (x-2) - x + 1};
+		\addplot+[thick,red,solid,samples=5,name path=function3] {(x+2) - -(x-2) - x + 1};
+		\addplot+[thick,red,dashed,samples=5,name path=function4] {-(x+2) - -(x-2) - x + 1};
 		\addplot+[name path=axis] coordinates {(-10,0) (10,0)};
 		\addplot[green!20] fill between[ of=function4 and axis,split,
 		         every segment no 0/.style={opacity=1,white}];
@@ -129,12 +129,15 @@ x \in [-3, -1] \cup [5; \infty)
 		domain=-10:10
         ]
 
-		\addplot+[thick, samples=10,name path=function1] {2*(x+1) - 3*x + (x+2)};
-		\addplot+[thick, samples=10,name path=function2] {2*-(x+1) - 3*x + (x+2)};
-		\addplot+[thick, samples=10,name path=function3] {2*(x+1) - 3*x + -(x+2)};
-		\addplot+[thick, samples=10,name path=function4] {2*-(x+1) - 3*x + -(x+2)};
+		\addplot+[thick,blue,solid,samples=10,name path=function1]  {2*+(x+1) - 3*x + +(x+2)};
+		\addplot+[thick,blue,dashed,samples=10,name path=function2] {2*-(x+1) - 3*x + +(x+2)};
+		\addplot+[thick,red,solid,samples=10,name path=function3]   {2*+(x+1) - 3*x + -(x+2)};
+		\addplot+[thick,red,dashed,samples=10,name path=function4]  {2*-(x+1) - 3*x + -(x+2)};
 		\addplot+[name path=axis] coordinates {(-10,0) (10,0)};
 		\addplot[green!20] fill between[ of=function1 and axis];
+%		\addplot[green!20] fill between[ of=function3 and axis,split,
+%		         every segment no 1/.style={opacity=1,white}];
+
     \end{axis}
 \end{tikzpicture}
 \begin{displaymath}
@@ -157,8 +160,8 @@ x \in (-\infty; \infty)
 		domain=-10:10
         ]
 
-		\addplot+[thick, samples=10,name path=function1] {x - x};
-		\addplot+[thick, samples=10,name path=function2] {-x - x};
+		\addplot+[thick,blue,solid,samples=10,name path=function1]  {+x - x};
+		\addplot+[thick,blue,dashed,samples=10,name path=function2] {-x - x};
 		\addplot[green!20] fill between[ of=function1 and function2,split,
 		         every segment no 1/.style={opacity=1,white}];
     \end{axis}
@@ -183,10 +186,10 @@ x \in (-\infty; 0)
 		domain=-5:5
         ]
 
-		\addplot+[thick, samples=10,name path=function1] {(2*x-1) - (1-x)};
-		\addplot+[thick, samples=10,name path=function2] {-(2*x-1) - (1-x)};
-		\addplot+[thick, samples=10,name path=function3] {(2*x-1) - -(1-x)};
-		\addplot+[thick, samples=10,name path=function4] {-(2*x-1) - -(1-x)};
+		\addplot+[thick,blue,solid,samples=10,name path=function1] {+(2*x-1) - +(1-x)};
+		\addplot+[thick,blue,dashed,samples=10,name path=function2] {-(2*x-1) - +(1-x)};
+		\addplot+[thick,red,solid,samples=10,name path=function3] {+(2*x-1) - -(1-x)};
+		\addplot+[thick,red,dashed,samples=10,name path=function4] {-(2*x-1) - -(1-x)};
 		\addplot+[name path=axis] coordinates {(-5,0) (5,0)};
 		\addplot[green!20] fill between[ of=function2 and axis,split,
 		         every segment no 0/.style={opacity=1,white}];
@@ -214,14 +217,14 @@ x \in (0; \frac{2}{3})
 		domain=-2:6
         ]
 
-		\addplot+[thick, samples=10,name path=function1] {+(x - 3) - +(2 - x) - +(x - 1)};
-		\addplot+[thick, samples=10,name path=function2] {-(x - 3) - +(2 - x) - +(x - 1)};
-		\addplot+[thick, samples=10,name path=function3] {+(x - 3) - -(2 - x) - +(x - 1)};
-		\addplot+[thick, samples=10,name path=function4] {-(x - 3) - -(2 - x) - +(x - 1)};
-		\addplot+[thick, samples=10,name path=function5] {+(x - 3) - +(2 - x) - -(x - 1)};
-		\addplot+[thick, samples=10,name path=function6] {-(x - 3) - +(2 - x) - -(x - 1)};
-		\addplot+[thick, samples=10,name path=function7] {+(x - 3) - -(2 - x) - -(x - 1)};
-		\addplot+[thick, samples=10,name path=function8] {-(x - 3) - -(2 - x) - -(x - 1)};
+		\addplot+[thick,blue,solid,samples=10,name path=function1]  {+(x - 3) - +(2 - x) - +(x - 1)};
+		\addplot+[thick,blue,dashed,samples=10,name path=function2] {-(x - 3) - +(2 - x) - +(x - 1)};
+		\addplot+[thick,red,solid,samples=10,name path=function3]   {+(x - 3) - -(2 - x) - +(x - 1)};
+		\addplot+[thick,red,dashed,samples=10,name path=function4]  {-(x - 3) - -(2 - x) - +(x - 1)};
+		\addplot+[blue,solid,samples=10,name path=function5]        {+(x - 3) - +(2 - x) - -(x - 1)};
+		\addplot+[blue,dashed,samples=10,name path=function6]       {-(x - 3) - +(2 - x) - -(x - 1)};
+		\addplot+[red,solid,samples=10,name path=function7]         {+(x - 3) - -(2 - x) - -(x - 1)};
+		\addplot+[red,dashed,samples=10,name path=function8]        {-(x - 3) - -(2 - x) - -(x - 1)};
 		\addplot+[name path=axis] coordinates {(-5,0) (5,0)};
 		\addplot[green!20] fill between[ of=function2 and axis,split,
 		         every segment no 1/.style={opacity=1,white}];
@@ -587,5 +590,39 @@ x \in (-\infty; -4)\cup(1; 2)\cup(3; \infty)
 \begin{displaymath}
 x \in (-6; -1)\cup(0; 3)
 \end{displaymath}
+
+\ex{21}
+\begin{displaymath}
+\begin{cases}
+x = \sin t \\ y = \ln |t| + 2t
+\end{cases}
+\end{displaymath}
+\begin{displaymath}
+t = \pm \arcsin x \cdot n\pi; n \in Z
+\end{displaymath}
+\begin{displaymath}
+y = \ln |\arcsin x \cdot n\pi| \pm 2\arcsin x + 2n\pi; n \in Z 
+\end{displaymath}
+\begin{tikzpicture}
+	\begin{axis}[axis lines=middle,axis on top, grid=both,no markers,xlabel=$x$,ylabel=$y$,
+		xmin=-7,xmax=7,
+		ymin=-7,ymax=7,
+		xtick={-7,...,7},
+		ytick={-7,...,7},
+        ]
+		\addplot+[thick, domain=-8:8, samples=100,name path=function] {sin x};
+		\addplot+[thick, domain=-8:8, samples=100,name path=function2] {ln x + 2 * x};
+		\addplot+[thick, domain=-8:8, samples=100,name path=function2] {ln -x + 2 * x};
+		\addplot+[name path=axis] coordinates {(-10,0) (10,0)};
+		\addplot[white] fill between[ of=function and axis,split,
+                every segment no 1/.style={green!20}];
+		\addplot[white] fill between[ of=function2 and axis,split,
+                every segment no 1/.style={green!20}];
+    \end{axis}
+\end{tikzpicture}
+\begin{displaymath}
+x \in (-6; -1)\cup(0; 3)
+\end{displaymath}
+
 
 \end{document}
