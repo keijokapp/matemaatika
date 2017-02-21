@@ -1,0 +1,101 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\pagenumbering{gobble}
+\usepackage[margin=0.5in]{geometry}
+
+\begin{document}
+
+\begin{large}
+ Tõenäoseim sündmuse toimumiste arv
+\end{large}
+
+\begin{flushleft}
+Kõige tõenäosem sündmuse $A$ toimumiste arv on
+$k_0$, mille puhul $P_{n,k_0}$ on maksimaalne. Sellisel juhul kehtivad järgmised võrratused:
+\end{flushleft}
+
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+
+\begin{displaymath}
+P_{n,k_0} \geq P_{n,k_0 + 1}
+\end{displaymath}
+
+\begin{displaymath}
+\frac{n!}{k_0!(n-k_0)!}p^{k_0}q^{n-k_0} \geq \frac{n!}{(k_0 + 1)!(n - k_0 - 1)!}p^{k_0+1}q^{n-k_0-1}
+\end{displaymath}
+
+\begin{displaymath}
+\frac{p^{k_0}q^{n-k_0}}{n-k_0} \geq \frac{p^{k_0+1}q^{n-k_0-1}}{k_0 + 1}
+\end{displaymath}
+
+\begin{displaymath}
+\frac{q}{n - k_0} \geq \frac{p}{k_0 + 1}
+\quad | (n-k_0)(k_0+1) \qquad (n \in N; k_0 \in N; n \geq k_0)
+\end{displaymath}
+
+\begin{displaymath}
+q(k_0 + 1) \geq p(n - k_0)
+\end{displaymath}
+
+\begin{displaymath}
+qk_0 + q \geq pn - pk_0
+\end{displaymath}
+
+\begin{displaymath}
+pk_0 + qk_0 \geq pn - q
+\end{displaymath}
+
+\begin{displaymath}
+(p + q) k_0 \geq pn - q \qquad (p + q = 1)
+\end{displaymath}
+
+\begin{displaymath}
+k_0 \geq pn - q
+\end{displaymath}
+
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+
+\begin{displaymath}
+P_{n,k_0} \geq P_{n,k_0 - 1}
+\end{displaymath}
+
+\begin{displaymath}
+\frac{n!}{k_0!(n-k_0)!}p^{k_0}q^{n-k_0} \geq \frac{n!}{(k_0 - 1)!(n - k_0 + 1)!}p^{k_0-1}q^{n-k_0+1}
+\end{displaymath}
+
+\begin{displaymath}
+\frac{p^{k_0}q^{n-k_0}}{k_0} \geq \frac{p^{k_0-1}q^{n-k_0+1}}{n - k_0 + 1}
+\end{displaymath}
+
+\begin{displaymath}
+\frac{p}{k_0} \geq \frac{q}{n - k_0 + 1}
+\quad | k_0(n - k_0 + 1) \qquad (n \in N; k_0 \in N; n \geq k_0)
+\end{displaymath}
+
+\begin{displaymath}
+p(n - k_0 + 1) \geq qk_0
+\end{displaymath}
+
+\begin{displaymath}
+pn - pk_0 + p \geq qk_0
+\end{displaymath}
+
+\begin{displaymath}
+qk_0 + pk_0 \leq pn + p
+\end{displaymath}
+
+\begin{displaymath}
+(p + q) k_0 \leq pn + p \qquad (p + q = 1)
+\end{displaymath}
+
+\begin{displaymath}
+k_0 \leq pn + p
+\end{displaymath}
+
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+
+\begin{displaymath}
+pn - q \leq k_0 \leq pn + p
+\end{displaymath}
+
+\end{document}
